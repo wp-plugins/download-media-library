@@ -33,9 +33,9 @@ function mtdml_zip($files){
 		$parent_id = get_post($file_id)->post_parent;
 		
 		// get file parent post type
-		$posttype_folder_name = get_post_type($parent_id);
-		$obj_post_type = get_post_type_object( $posttype_folder_name );
-		$posttype_folder_name = $obj_post_type->labels->name.'/';
+		$posttype_folder_name = get_post_type($parent_id).'/';
+		//$obj_post_type = get_post_type_object( $posttype_folder_name );
+		//$posttype_folder_name = $obj_post_type->labels->name.'/';
 		// get file parent slug
 		$post_folder_name = ($parent_id != 0) ? get_the_title($parent_id).'/' : '';
 		// get file mime type
@@ -133,7 +133,7 @@ function mtdml_setting(){
 				<input type="submit" class="button button-primary button-large" name="mtdml_download" id="mtdml_download" value="'. __('Download .zip', 'mtdml').'" />
 				<img style="display:none" class="loading" src="'.get_admin_url().'/images/spinner.gif" alt="" />
 			</p>
-			<div class="notice-info notice" style="margin-left:0;display:none">
+			<div class="notice-info notice">
 			<p>
 			'.__( 'Please consider making a donation you prefer, so still animated to develop more plugins and maintain support to existing plugins ;)', 'mtdml' ).'
 			<br /><br />
