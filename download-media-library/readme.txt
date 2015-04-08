@@ -16,8 +16,8 @@ Download the files from the Media Library in ZIP format, <strong>organized by po
 
 = Contribute =
 
-* [Github]:(https://github.com/marcelotorres/download-media-library/)
-* [Donate]: (https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G85Z9XFXWWHCY)
+* Github: https://github.com/marcelotorres/download-media-library/
+* Donate: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G85Z9XFXWWHCY
 
 == Installation ==
 
