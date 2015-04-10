@@ -33,9 +33,9 @@ function mtdml_zip($files){
 		$parent_id = get_post($file_id)->post_parent;
 		
 		// get file parent post type
-		$posttype_folder_name = get_post_type($parent_id).'/';
-		//$obj_post_type = get_post_type_object( $posttype_folder_name );
-		//$posttype_folder_name = $obj_post_type->labels->name.'/';
+		$posttype_folder_name = get_post_type($parent_id);
+		$obj_post_type = get_post_type_object( $posttype_folder_name );
+		$posttype_folder_name = $obj_post_type->labels->name.'/';
 		// get file parent slug
 		$post_folder_name = ($parent_id != 0) ? get_the_title($parent_id).'/' : '';
 		// get file mime type
@@ -45,7 +45,7 @@ function mtdml_zip($files){
 		$download_file = file_get_contents($file);
 
 		//add it to the zip
-		$zip->addFromString(iconv("UTF-8","CP852", $posttype_folder_name.$post_folder_name.$mimetype_folder_name.basename($file)),iconv("UTF-8","CP852", $download_file));
+		$zip->addFromString(iconv("UTF-8","CP852", $posttype_folder_name.$post_folder_name.$mimetype_folder_name.basename($file)),$download_file);
 
 	}
 

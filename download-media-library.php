@@ -5,7 +5,7 @@
  * Description: Download the files from the Media Library in ZIP format, <strong>organized by post type > post name > media type > file extension</strong>.
  * Author: marcelotorres
  * Author URI: http://marcelotorresweb.com/
- * Version: 0.1
+ * Version: 0.2
  * License: GPLv2 or later
  * Text Domain: mtdml
  * Domain Path: /languages/
